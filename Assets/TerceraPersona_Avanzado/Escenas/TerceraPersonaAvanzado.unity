@@ -164,6 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 147419030}
   - component: {fileID: 147419029}
+  - component: {fileID: 147419031}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -224,8 +225,38 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1171569281}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 836781162}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &147419031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147419028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 1
+  m_IgnoreTag: 
+  m_TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_MinimumDistanceFromTarget: 0.1
+  m_AvoidObstacles: 1
+  m_DistanceLimit: 0
+  m_MinimumOcclusionTime: 0
+  m_CameraRadius: 0.5
+  m_Strategy: 0
+  m_MaximumEffort: 4
+  m_SmoothingTime: 0
+  m_Damping: 0
+  m_DampingWhenOccluded: 0
+  m_OptimalTargetDistance: 0
 --- !u!1 &404820091
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,7 +605,7 @@ GameObject:
   m_Layer: 2
   m_Name: MiPersonaje
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -656,7 +687,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 467c1c864a54ba14c9eb49e8a54e62b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movimiento: 0
+  vertical: 0
   ejesVirtuales: {x: 0, y: 0}
+  ejesVirtualesGraduales: {x: 0, y: 0}
 --- !u!1001 &825022412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -705,9 +739,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7764487651825262745, guid: 70961b89fd22dcf449d0aa447bdb484c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 70961b89fd22dcf449d0aa447bdb484c, type: 3}
       propertyPath: m_Name
       value: Paladin WProp J Nordstrom
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051571768989249988, guid: 70961b89fd22dcf449d0aa447bdb484c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 70961b89fd22dcf449d0aa447bdb484c, type: 3}
       propertyPath: m_Controller
@@ -723,7 +765,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 70961b89fd22dcf449d0aa447bdb484c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 40565525}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 70961b89fd22dcf449d0aa447bdb484c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1688242109}
   m_SourcePrefab: {fileID: 100100000, guid: 70961b89fd22dcf449d0aa447bdb484c, type: 3}
 --- !u!4 &825022413 stripped
 Transform:
@@ -761,6 +806,7 @@ Transform:
   m_Children:
   - {fileID: 578513222}
   - {fileID: 655686958}
+  - {fileID: 147419030}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1012203542
@@ -1079,6 +1125,23 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 5000
+--- !u!1 &1688242107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 70961b89fd22dcf449d0aa447bdb484c, type: 3}
+  m_PrefabInstance: {fileID: 825022412}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1688242109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688242107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74d770f565316364c9078ac16046a412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1990355587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,4 +1243,3 @@ SceneRoots:
   - {fileID: 1990355589}
   - {fileID: 404820097}
   - {fileID: 836781162}
-  - {fileID: 147419030}
