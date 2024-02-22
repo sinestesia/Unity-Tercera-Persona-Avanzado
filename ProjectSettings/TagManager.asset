@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ElementosInteractivos
   - Enemigos
+  - Enemigo_Arquero
   layers:
   - Default
   - TransparentFX
