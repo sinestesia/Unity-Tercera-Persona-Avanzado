@@ -56,6 +56,15 @@ public class TerceraPersona_ControladorAvanzado : MonoBehaviour
     {
         rb.MovePosition(rb.position + dirMov * Time.fixedDeltaTime);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // Es la espada enemiga..?
+        if (other.gameObject.layer == 6)
+        {
+            Debug.Log("Enemigo me alcanza con la espada");
+        }
+    }
     #endregion
     // -----------------------------------------------------------------
     #region 3) Metodos Originales

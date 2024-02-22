@@ -17,6 +17,7 @@ public class TerceraPersona_Animator : MonoBehaviour
     Transform cam;
 
     Transform huesoColumna;
+    public Transform hitBoxEspada;
     #endregion
     // -----------------------------------------------------------------
     #region 2) Funciones Predeterminadas de Unity 
@@ -56,6 +57,16 @@ public class TerceraPersona_Animator : MonoBehaviour
             anim.SetLookAtPosition(huesoColumna.position + transform.forward * 5f);
             anim.SetLookAtWeight(1f, 1f, 1f);
         }
+    }
+
+    public void HabilitarHitBox()
+    {
+        hitBoxEspada.gameObject.SetActive(true);
+    }
+
+    public void DeshabilitarHitBox()
+    {
+        hitBoxEspada.gameObject.SetActive(false);
     }
     #endregion
     // -----------------------------------------------------------------

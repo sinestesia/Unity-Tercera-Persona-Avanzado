@@ -13,11 +13,11 @@ TagManager:
   - 
   - Water
   - UI
+  - HitBox_Enemiga
+  - HitBox_MiPersonaje
   - 
-  - 
-  - 
-  - 
-  - 
+  - MiPersonaje
+  - Enemigos
   - 
   - 
   - 
